@@ -12,7 +12,7 @@ except Exception as e:
     print("There was an error while extracting words: "+e)
     sys.exit()
 
-x=re.findall(r"\/[A-Za-z0-9.-]+",text)
+x=re.findall(r"\/[A-Za-z0-9.-_\/]+",text)
 filename= os.path.split(sys.argv[1])[1]
 
 textfile = open(filename.split(".")[0]+"_wordlist", "w")
